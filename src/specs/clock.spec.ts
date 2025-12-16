@@ -16,6 +16,5 @@ describe('Clock App Tests', () => {
   it('should be able to click add city button', async () => {
     await clockPage.clickAddCityButton();
     // Button clicked successfully
-    expect(true).toBe(true);
   });
 });
