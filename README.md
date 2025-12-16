@@ -59,16 +59,14 @@ npm run build
 ### 3. Start Appium
 
 ```bash
-appium --allow-insecure=*:session_discovery
+npm run appium
 ```
-
-(The flag enables session discovery for Appium Inspector)
 
 ### 4. Run Tests
 
 **Android:**
 ```bash
-npm test
+npm run test
 ```
 
 **iOS:**

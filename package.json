@@ -7,6 +7,7 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
+    "appium": "appium",
     "test": "npm run build && npm run test:android",
     "test:android": "wdio config/android.conf.ts",
     "test:ios": "wdio config/ios.conf.ts",
