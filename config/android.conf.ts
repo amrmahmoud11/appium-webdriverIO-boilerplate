@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export const config = {
   runner: 'local',
-  port: 4723,
+  port: parseInt(process.env.APPIUM_PORT || '4723'),
   specs: [
     '../dist/specs/*.spec.js'
   ],
@@ -9,9 +13,9 @@ export const config = {
     {
       platformName: 'Android',
       'appium:automationName': 'UiAutomator2',
-      'appium:deviceName': 'emulator-5554',
-      'appium:appPackage': 'com.google.android.deskclock',
-      'appium:appActivity': 'com.android.deskclock.DeskClock',
+      'appium:deviceName': process.env.DEVICE_NAME || 'emulator-5554',
+      'appium:appPackage': process.env.APP_PACKAGE || 'com.google.android.deskclock',
+      'appium:appActivity': process.env.APP_ACTIVITY || 'com.android.deskclock.DeskClock',
       'appium:newCommandTimeout': 240,
       'appium:connectHardwareKeyboard': true
     }
@@ -31,5 +35,5 @@ reporterOptions: {
     disableWebdriverScreenshotsReporting: false,
   }
 },
-  baseUrl: 'http://localhost:4723'
+  baseUrl: `http://${process.env.APPIUM_HOST || 'localhost'}:${process.env.APPIUM_PORT || '4723'}`
 };

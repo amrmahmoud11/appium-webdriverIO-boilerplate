@@ -9,7 +9,8 @@
     "prebuild": "npm run clean",
     "test": "npm run build && npm run test:android",
     "test:android": "wdio config/android.conf.ts",
-    "test:ios": "wdio config/ios.conf.ts"
+    "test:ios": "wdio config/ios.conf.ts",
+    "report:open": "npx allure open allure-report"
   },
   "repository": {
     "type": "git",
@@ -37,5 +38,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "webdriverio": "^9.21.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
