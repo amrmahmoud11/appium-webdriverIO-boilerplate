@@ -1,0 +1,41 @@
+{
+  "name": "appium-webdriverio-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "test": "npm run build && npm run test:android",
+    "test:android": "wdio config/android.conf.ts",
+    "test:ios": "wdio config/ios.conf.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrmahmoud11/appium-webdriverIO-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amrmahmoud11/appium-webdriverIO-boilerplate/issues"
+  },
+  "homepage": "https://github.com/amrmahmoud11/appium-webdriverIO-boilerplate#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.0.2",
+    "@wdio/allure-reporter": "^9.21.0",
+    "@wdio/cli": "^9.21.1",
+    "@wdio/local-runner": "^9.21.0",
+    "@wdio/mocha-framework": "^9.21.0",
+    "@wdio/spec-reporter": "^9.20.0",
+    "@wdio/types": "^9.20.0",
+    "appium-webdriverio": "^1.0.4",
+    "rimraf": "^6.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "webdriverio": "^9.21.0"
+  }
+}

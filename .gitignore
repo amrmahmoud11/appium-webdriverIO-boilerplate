@@ -1,0 +1,31 @@
+node_modules/
+.DS_Store
+*.log
+npm-debug.log
+yarn-error.log
+.env
+.vscode/
+.idea/
+dist/
+build/
+coverage/
+
+# WebdriverIO & Appium Test Reports (but NOT package.json, tsconfig.json, etc.)
+test-results/
+allure-results/
+allure-report/
+reports/
+wdio-*.xml
+window_dump.xml
+
+# Appium & Android
+.appium/
+
+# IDE
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+.gradle
